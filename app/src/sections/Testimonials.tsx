@@ -82,7 +82,7 @@ const Testimonials = () => {
       reviews: 2,
       time: '4 months ago',
       rating: 5,
-      text: "Highly recommend BrightWave Dental Studio. The dentist was experienced and resolved issues other clinics were not able to treat. The team is friendly, available for patients, and truly caring.",
+      text: "Highly recommend NovaPearl Dental Studio. The dentist was experienced and resolved issues other clinics were not able to treat. The team is friendly, available for patients, and truly caring.",
       tags: ['experienced doctor', 'dental care'],
     },
   ];

@@ -39,7 +39,7 @@ const FAQ = () => {
 
   const faqs = [
     {
-      question: 'What treatments do you offer at BrightWave Dental Studio?',
+      question: 'What treatments do you offer at NovaPearl Dental Studio?',
       answer: 'We provide a complete range of dental treatments including: General Dentistry, Invisalign/Clear Aligners, Dental Implants, Root Canal Treatment, Orthodontics (Braces), Teeth Whitening (Zoom), Smile Design and Cosmetic Dentistry, Pediatric Dentistry, Full Mouth Rehabilitation, Wisdom Tooth Extraction, Crowns and Bridges, Gum Disease Treatment, Dentures, and Preventive Dentistry.',
     },
     {
@@ -48,7 +48,7 @@ const FAQ = () => {
     },
     {
       question: 'Do you offer same-day appointments or emergency dental care?',
-      answer: 'Yes, we accommodate emergency dental cases and offer same-day appointments based on availability. Please call us ahead at +1 555 014 7823 for emergency situations. We reserve specific time slots for walk-in emergencies.',
+      answer: 'Yes, we accommodate emergency dental cases and offer same-day appointments based on availability. Please call us ahead at +1 555 019 6042 for emergency situations. We reserve specific time slots for walk-in emergencies.',
     },
     {
       question: 'Is the clinic child-friendly?',
@@ -60,7 +60,7 @@ const FAQ = () => {
     },
     {
       question: 'How can I book an appointment?',
-      answer: 'You can book an appointment by calling us directly at +1 555 014 7823, sending a WhatsApp message, or using our online booking form. We offer flexible scheduling including evening and weekend appointments.',
+      answer: 'You can book an appointment by calling us directly at +1 555 019 6042, sending a WhatsApp message, or using our online booking form. We offer flexible scheduling including evening and weekend appointments.',
     },
     {
       question: 'What safety and sterilization protocols do you follow?',
@@ -127,13 +127,10 @@ const FAQ = () => {
           {/* CTA */}
           <div className="mt-12 text-center">
             <p className="text-gray-600 mb-4">Still have questions?</p>
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-2 btn-primary"
-            >
+            <span className="inline-flex items-center gap-2 btn-primary cursor-default">
               <MessageCircle className="w-5 h-5" />
               Contact Us
-            </a>
+            </span>
           </div>
         </div>
       </div>

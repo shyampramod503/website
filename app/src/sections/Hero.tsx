@@ -170,13 +170,13 @@ const Hero = () => {
 
         {/* CTA Buttons */}
         <div ref={ctaRef} className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="#contact" className="btn-primary flex items-center justify-center gap-2 text-lg">
+          <span className="btn-primary flex items-center justify-center gap-2 text-lg cursor-default">
             <Phone className="w-5 h-5" />
             Book Appointment
-          </a>
-          <a href="#services" className="btn-outline border-white text-white hover:bg-white hover:text-[#0A2540]">
+          </span>
+          <span className="btn-outline border-white text-white hover:bg-white hover:text-[#0A2540] cursor-default">
             Our Services
-          </a>
+          </span>
         </div>
 
         {/* Scroll Hint */}

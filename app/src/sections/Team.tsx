@@ -38,14 +38,14 @@ const Team = () => {
 
   const teamMembers = [
     {
-      name: 'Dr. Mira Ellis',
+      name: 'Dr. Elena Cross',
       role: 'Lead Dentist & Invisalign Specialist',
       qualifications: 'BDS, MDS Orthodontics',
       image: '/lead-dentist-portrait.jpg',
       specialties: ['Invisalign', 'Cosmetic Dentistry', 'Smile Design'],
     },
     {
-      name: 'Dr. Arjun Vale',
+      name: 'Dr. Kabir Stone',
       role: 'Pediatric Dentist',
       qualifications: 'BDS, MDS Pediatric Dentistry',
       image: '/pediatric-dental.jpg',

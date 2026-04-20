@@ -123,13 +123,10 @@ const Services = () => {
                 <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">
                   {service.description}
                 </p>
-                <a
-                  href={service.link}
-                  className="inline-flex items-center gap-2 text-[#00A3E0] font-medium text-sm hover:gap-3 transition-all"
-                >
+                <span className="inline-flex items-center gap-2 text-[#00A3E0] font-medium text-sm hover:gap-3 transition-all cursor-default">
                   Read More
                   <ArrowRight className="w-4 h-4" />
-                </a>
+                </span>
               </div>
             </div>
           ))}

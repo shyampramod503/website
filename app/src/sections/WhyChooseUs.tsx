@@ -91,7 +91,7 @@ const WhyChooseUs = () => {
             Why Choose Us
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0A2540] mb-4">
-            BrightWave Dental Studio
+            NovaPearl Dental Studio
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
             We combine expert care, advanced technology, and personalized service 

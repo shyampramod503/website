@@ -11,7 +11,6 @@ import {
   User,
   MessageSquare
 } from 'lucide-react';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -19,7 +18,6 @@ const Contact = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
   const infoRef = useRef<HTMLDivElement>(null);
-  const [showDialog, setShowDialog] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -72,28 +70,23 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setShowDialog(true);
-    setFormData({ name: '', email: '', phone: '', date: '', reason: '' });
   };
 
   const contactInfo = [
     {
       icon: Phone,
       title: 'Phone',
-      content: '+1 555 014 7823',
-      link: 'tel:+15550147823',
+      content: '+1 555 019 6042',
     },
     {
       icon: Mail,
       title: 'Email',
-      content: 'hello@brightwavedental.example',
-      link: 'mailto:hello@brightwavedental.example',
+      content: 'hello@novapearldental.example',
     },
     {
       icon: MapPin,
       title: 'Address',
-      content: '48 Willow Crest Avenue, Garden District, Riverton 560214',
-      link: '#',
+      content: '72 Maple Harbor Lane, Brookfield 430118',
     },
     {
       icon: Clock,
@@ -223,8 +216,8 @@ const Contact = () => {
 
               {/* Submit */}
               <button
-                type="submit"
-                className="w-full btn-primary flex items-center justify-center gap-2 py-4"
+                type="button"
+                className="w-full btn-primary flex items-center justify-center gap-2 py-4 cursor-default"
               >
                 <Send className="w-5 h-5" />
                 Submit Appointment Request
@@ -236,9 +229,8 @@ const Contact = () => {
           <div ref={infoRef} className="space-y-6">
             {/* Quick Contact Cards */}
             {contactInfo.map((info, index) => (
-              <a
+              <div
                 key={index}
-                href={info.link}
                 className="flex items-start gap-4 bg-[#F4F7F9] rounded-xl p-6 hover:shadow-md transition-shadow group"
               >
                 <div className="w-12 h-12 bg-[#00A3E0]/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-[#00A3E0] transition-colors">
@@ -249,7 +241,7 @@ const Contact = () => {
                   <p className="text-gray-600">{info.content}</p>
                   {info.subContent && <p className="text-gray-500 text-sm">{info.subContent}</p>}
                 </div>
-              </a>
+              </div>
             ))}
 
             {/* Map Placeholder */}
@@ -271,41 +263,14 @@ const Contact = () => {
             <div className="bg-gradient-to-r from-[#0A2540] to-[#00A3E0] rounded-xl p-6 text-white text-center">
               <h4 className="font-bold text-lg mb-2">Dental Emergency?</h4>
               <p className="text-white/80 text-sm mb-4">We offer same-day emergency appointments</p>
-              <a href="tel:+15550147823" className="inline-flex items-center gap-2 bg-white text-[#0A2540] px-6 py-3 rounded-full font-semibold hover:bg-[#00E5FF] transition-colors">
+              <span className="inline-flex items-center gap-2 bg-white text-[#0A2540] px-6 py-3 rounded-full font-semibold hover:bg-[#00E5FF] transition-colors cursor-default">
                 <Phone className="w-5 h-5" />
                 Call Now
-              </a>
+              </span>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Success Dialog */}
-      <Dialog open={showDialog} onOpenChange={setShowDialog}>
-        <DialogContent className="sm:max-w-md">
-          <DialogHeader>
-            <DialogTitle className="text-center text-2xl text-[#0A2540]">
-              Appointment Request Received!
-            </DialogTitle>
-            <DialogDescription className="text-center text-gray-600">
-              Thank you for booking with BrightWave Dental Studio. Our team will contact you shortly to confirm your appointment.
-            </DialogDescription>
-          </DialogHeader>
-          <div className="flex justify-center py-4">
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
-              <svg className="w-8 h-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-              </svg>
-            </div>
-          </div>
-          <button
-            onClick={() => setShowDialog(false)}
-            className="w-full btn-primary"
-          >
-            Close
-          </button>
-        </DialogContent>
-      </Dialog>
     </section>
   );
 };

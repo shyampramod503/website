@@ -21,13 +21,6 @@ const Footer = () => {
     'Dental Checkups',
   ];
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <footer className="bg-[#0A2540] text-white">
       {/* Main Footer */}
@@ -42,25 +35,24 @@ const Footer = () => {
                 </svg>
               </div>
               <div>
-                <span className="text-xl font-bold block leading-tight">BRIGHTWAVE</span>
+                <span className="text-xl font-bold block leading-tight">NOVAPEARL</span>
                 <span className="text-xs tracking-widest text-white/70">DENTAL STUDIO</span>
               </div>
             </div>
             <p className="text-white/70 text-sm leading-relaxed mb-6">
-              BrightWave Dental Studio is your trusted destination for expert dental care 
+              NovaPearl Dental Studio is your trusted destination for expert dental care 
               in a warm and welcoming environment. We ensure every visit is comfortable 
               and stress-free.
             </p>
             {/* Social Links */}
             <div className="flex gap-3">
               {[Facebook, Instagram, Youtube, Linkedin].map((Icon, index) => (
-                <a
+                <span
                   key={index}
-                  href="#"
                   className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#00A3E0] transition-colors"
                 >
                   <Icon className="w-5 h-5" />
-                </a>
+                </span>
               ))}
             </div>
           </div>
@@ -71,16 +63,9 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      scrollToSection(link.href);
-                    }}
-                    className="text-white/70 hover:text-[#00E5FF] transition-colors text-sm"
-                  >
+                  <span className="text-white/70 hover:text-[#00E5FF] transition-colors text-sm">
                     {link.name}
-                  </a>
+                  </span>
                 </li>
               ))}
             </ul>
@@ -92,16 +77,9 @@ const Footer = () => {
             <ul className="space-y-3">
               {services.map((service, index) => (
                 <li key={index}>
-                  <a
-                    href="#services"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      scrollToSection('#services');
-                    }}
-                    className="text-white/70 hover:text-[#00E5FF] transition-colors text-sm"
-                  >
+                  <span className="text-white/70 hover:text-[#00E5FF] transition-colors text-sm">
                     {service}
-                  </a>
+                  </span>
                 </li>
               ))}
             </ul>
@@ -114,21 +92,20 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-[#00A3E0] flex-shrink-0 mt-0.5" />
                 <span className="text-white/70 text-sm">
-                  48 Willow Crest Avenue, Garden District,
-                  Riverton 560214
+                  72 Maple Harbor Lane, Brookfield 430118
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-[#00A3E0] flex-shrink-0" />
-                <a href="tel:+15550147823" className="text-white/70 text-sm hover:text-[#00E5FF]">
-                  +1 555 014 7823
-                </a>
+                <span className="text-white/70 text-sm hover:text-[#00E5FF]">
+                  +1 555 019 6042
+                </span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-[#00A3E0] flex-shrink-0" />
-                <a href="mailto:hello@brightwavedental.example" className="text-white/70 text-sm hover:text-[#00E5FF]">
-                  hello@brightwavedental.example
-                </a>
+                <span className="text-white/70 text-sm hover:text-[#00E5FF]">
+                  hello@novapearldental.example
+                </span>
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="w-5 h-5 text-[#00A3E0] flex-shrink-0 mt-0.5" />
@@ -146,15 +123,15 @@ const Footer = () => {
       <div className="border-t border-white/10">
         <div className="container-custom py-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-white/60 text-sm">
-            Copyright © 2026 BrightWave Dental Studio | All Rights Reserved
+            Copyright © 2026 NovaPearl Dental Studio | All Rights Reserved
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-white/60 text-sm hover:text-white transition-colors">
+            <span className="text-white/60 text-sm hover:text-white transition-colors">
               Privacy Policy
-            </a>
-            <a href="#" className="text-white/60 text-sm hover:text-white transition-colors">
+            </span>
+            <span className="text-white/60 text-sm hover:text-white transition-colors">
               Terms & Conditions
-            </a>
+            </span>
           </div>
         </div>
       </div>

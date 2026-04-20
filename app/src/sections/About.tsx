@@ -103,7 +103,7 @@ const About = () => {
               <span className="text-[#00A3E0]">Modern Technology</span>
             </h2>
             <p className="text-gray-600 text-lg mb-6 leading-relaxed">
-              Led by Dr. Mira Ellis, our clinic is a state-of-the-art dental center specializing in 
+              Led by Dr. Elena Cross, our clinic is a state-of-the-art dental center specializing in 
               Invisalign, cosmetic dentistry, and pediatric care. From our humble beginnings, we 
               have grown into a modern facility offering world-class dental treatments.
             </p>
@@ -125,12 +125,12 @@ const About = () => {
               ))}
             </div>
 
-            <a href="#services" className="btn-primary inline-flex items-center gap-2">
+            <span className="btn-primary inline-flex items-center gap-2 cursor-default">
               Know More
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-            </a>
+            </span>
           </div>
 
           {/* Image */}
@@ -138,7 +138,7 @@ const About = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
                 src="/lead-dentist-portrait.jpg"
-                alt="Dr. Mira Ellis - Dental Specialist"
+                alt="Dr. Elena Cross - Dental Specialist"
                 className="w-full h-auto object-cover"
               />
               {/* Overlay Badge */}
