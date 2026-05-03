@@ -1,0 +1,373 @@
+import type { Config } from "tailwindcss"
+
+const config: Config = {
+  darkMode: ["class"],
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        ocean: {
+          50: "#f0f7ff",
+          100: "#e0effe",
+          200: "#bae0fd",
+          300: "#7ccbfd",
+          400: "#36b3fa",
+          500: "#0c9aed",
+          600: "#027bd4",
+          700: "#0362ab",
+          800: "#07528d",
+          900: "#0c4574",
+          950: "#082b4d",
+        },
+        sand: {
+          50: "#fbf8f4",
+          100: "#f5efe6",
+          200: "#eadbc8",
+          300: "#dec0a3",
+          400: "#d0a07a",
+          500: "#c4855a",
+          600: "#b86e4a",
+          700: "#99573d",
+          800: "#7d4836",
+          900: "#653c2f",
+          950: "#371e18",
+        },
+        gold: {
+          50: "#fffbeb",
+          100: "#fff3c6",
+          200: "#ffe588",
+          300: "#ffd24a",
+          400: "#ffbc20",
+          500: "#f99a07",
+          600: "#dd7302",
+          700: "#b75006",
+          800: "#943d0c",
+          900: "#7a330d",
+          950: "#461902",
+        },
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+      },
+      fontFamily: {
+        serif: ["Playfair Display", "Georgia", "serif"],
+        sans: ["Inter", "system-ui", "sans-serif"],
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "float": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        "compass-spin": {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
+        "plane-fly": {
+          "0%": { transform: "translateX(-100%) translateY(20px)" },
+          "100%": { transform: "translateX(100vw) translateY(-20px)" },
+        },
+        "ticket-print": {
+          "0%": { transform: "translateY(-100%) scale(0.8)", opacity: "0" },
+          "50%": { transform: "translateY(0%) scale(1.05)", opacity: "1" },
+          "100%": { transform: "translateY(0%) scale(1)", opacity: "1" },
+        },
+        "draw-line": {
+          "0%": { strokeDashoffset: "1000" },
+          "100%": { strokeDashoffset: "0" },
+        },
+        "pulse-glow": {
+          "0%, 100%": { boxShadow: "0 0 20px rgba(249, 154, 7, 0.3)" },
+          "50%": { boxShadow: "0 0 40px rgba(249, 154, 7, 0.6)" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        "float": "float 3s ease-in-out infinite",
+        "compass-spin": "compass-spin 20s linear infinite",
+        "plane-fly": "plane-fly 3s ease-in-out",
+        "ticket-print": "ticket-print 0.8s ease-out forwards",
+        "draw-line": "draw-line 2s ease-out forwards",
+        "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+      },
+    },
+  },
+  plugins: [require("tailwindcss-animate")],
+}
+
+export default config
+
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [{ "name": "next" }],
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}
+
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Testing
+coverage
+
+# Next.js
+.next/
+out/
+
+# Production
+build
+
+# Misc
+.DS_Store
+*.pem
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local env files
+.env*.local
+.env
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Gods Own Travel Company
+
+A premium, modern, and visually immersive travel website built with Next.js, React, TypeScript, and Tailwind CSS.
+
+## Features
+
+- **Premium Design**: Clean, minimal UI with travel-themed elements
+- **Fully Responsive**: Mobile-first design that works on all devices
+- **Smooth Animations**: Framer Motion powered scroll animations and micro-interactions
+- **Interactive Components**:
+  - Ticket booking animation with perforated edges
+  - Floating WhatsApp button
+  - Animated compass
+  - Route lines that draw on scroll
+  - Loading screen with plane animation
+- **Dark/Light Mode**: Toggle between themes
+- **Booking System**: Email and WhatsApp integration
+- **SEO Optimized**: Meta tags and semantic HTML
+
+## Tech Stack
+
+- Next.js 14
+- React 18
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Lucide React
+- Radix UI
+
+## Getting Started
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Run development server:
+   ```bash
+   npm run dev
+   ```
+
+3. Build for production:
+   ```bash
+   npm run build
+   ```
+
+## Deployment
+
+Ready for deployment on Vercel or Netlify:
+
+### Vercel
+```bash
+npm i -g vercel
+vercel
+```
+
+### Netlify
+```bash
+npm i -g netlify-cli
+netlify deploy
+```
+
+## Project Structure
+
+```
+gods-own-travel/
+├── app/                    # Next.js app directory
+│   ├── globals.css         # Global styles
+│   ├── layout.tsx          # Root layout
+│   └── page.tsx            # Home page
+├── components/
+│   ├── animations/         # Animation components
+│   │   ├── scroll-reveal.tsx
+│   │   ├── ticket-animation.tsx
+│   │   ├── compass.tsx
+│   │   ├── loading-plane.tsx
+│   │   └── route-lines.tsx
+│   ├── sections/           # Page sections
+│   │   ├── navbar.tsx
+│   │   ├── hero.tsx
+│   │   ├── services.tsx
+│   │   ├── destinations.tsx
+│   │   ├── booking.tsx
+│   │   ├── testimonials.tsx
+│   │   ├── about.tsx
+│   │   ├── contact.tsx
+│   │   └── footer.tsx
+│   ├── ui/                 # Reusable UI components
+│   │   ├── button.tsx
+│   │   ├── card.tsx
+│   │   ├── input.tsx
+│   │   └── badge.tsx
+│   ├── loading-screen.tsx
+│   └── floating-whatsapp.tsx
+├── lib/
+│   └── utils.ts            # Utility functions
+├── public/                 # Static assets
+├── styles/
+├── next.config.js
+├── tailwind.config.ts
+├── tsconfig.json
+└── package.json
+```
+
+## Customization
+
+- **Colors**: Edit `tailwind.config.ts` to change the color palette
+- **Content**: Update text in each section component
+- **Images**: Replace Unsplash URLs with your own images
+- **Contact Info**: Update phone numbers and emails in components
+
+## License
+
+MIT License - feel free to use for personal or commercial projects.
+
+---
+
+Built with love by Gods Own Travel Company
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export',
+  images: {
+    unoptimized: true,
+  },
+}
+
+module.exports = nextConfig
+
+{
+  "name": "gods-own-travel",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "^14.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "framer-motion": "^10.16.0",
+    "lucide-react": "^0.294.0",
+    "clsx": "^2.0.0",
+    "tailwind-merge": "^2.0.0",
+    "@radix-ui/react-dialog": "^1.0.5",
+    "@radix-ui/react-slot": "^1.0.2",
+    "class-variance-authority": "^0.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.3.6",
+    "typescript": "^5.3.0"
+  }
+}
+
+module.exports = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+}
